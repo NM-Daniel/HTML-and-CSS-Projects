@@ -1,0 +1,29 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+nav {
+    text-align: center;
+}
+
+.home {
+    text-align: center;
+    font-size: 30px;
+}
+
+.rsvp {
+    width: 400px;
+    margin: 10px;
+    border: double;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.gallery, h1, #videos, #contact {
+    text-align: center;
+}
+
+.gallery {
+    display: block;
+}

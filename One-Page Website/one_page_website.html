@@ -4,6 +4,7 @@
 		<title>Treehouses Ltd.</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="JS/one_page_website.js" defer></script>
 	</head>
 
 	<body>
@@ -136,7 +137,83 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- Lightbox section -->
+		<!-- images to be used in the Lightbox -->
+		
+			<div class="row">
+				<div class="column">
+					<img src="images/plant1-small.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+				</div>
+				<div class="column">
+					<img src="images/plant2-small.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+				</div>
+				<div class="column">
+					<img src="images/plant3-small.png" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+				</div>
+				<div class="column">
+					<img src="images/plant4-small.png" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+				</div>
+			</div>
+			
+			<!-- The Lightbox -->
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext">1 / 4</div>
+						<img src="images/plant1.png" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">2 / 4</div>
+						<img src="images/plant2.png" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">3 / 4</div>
+						<img src="images/plant3.png" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">4 / 4</div>
+						<img src="images/plant4.png" style="width:100%">
+					</div>
+				
+
+					<!--Next/Previous controls-->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<!-- Caption text -->
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+
+					<!-- Thumnail image controls -->
+					<div class="column">
+						<img class="demo cursor" src="images/plant1.png" style="width: 100%;" onclick="currentSlide(1)" alt="Flower">
+					</div>
+						
+					<div class="column">
+						<img class="demo cursor" src="images/plant2.png" style="width: 100%;" onclick="currentSlide(2)" alt="Flower">
+					</div>
+
+					<div class="column">
+						<img class="demo cursor" src="images/plant3.png" style="width: 100%;" onclick="currentSlide(3)" alt="Flower">
+					</div>
+
+					<div class="column">
+						<img class="demo cursor" src="images/plant4.png" style="width: 100%;" onclick="currentSlide(4)" alt="Flower">
+					</div>
+				</div>	
+			</div>
+		
+
 		<!-- END GALLERY -->
+
+
 		<section>
 			<div id="videos">
 				<h1>Videos</h1>
@@ -172,7 +249,7 @@
 							Please provide us with your basic contact information.
 						</p>
 						<div>
-							<form action="" method ="post">
+							<form id="contact" action="" method ="post">
 								First name:<br><input class="rsvp" type="text" name="First Name"><br>
 								Last name:<br><input class="rsvp" type="text" name="Last Name"><br>
 								Email:<br><input class="rsvp" type="email" name="Email Address"><br>
